@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /restarter/
+AuthType Basic
+AuthName "[RockShowLink-Shield]"
+AuthUserFile ../htdocs/restarter/.htpasswd
+Require valid-user

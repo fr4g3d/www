@@ -1,5 +1,5 @@
 <?php
-phpinfo();
+//phpinfo();
 date_default_timezone_set("Asia/Jakarta");
 $title = "Apache Restarter Panel";
 if(isset($_GET['p'])) {

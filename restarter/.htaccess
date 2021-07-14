@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /restarter/
+AuthType Basic
+AuthName "[RockShowLink-Shield]"
+AuthUserFile D:\X.UserZ\Documents\GitHub\www\restarter/.htpasswd
+Require valid-user

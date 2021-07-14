@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /www/
+RewriteRule ^restart$ restarter/index.php
+RewriteRule ^restart/(.*) restarter/index.php?p=$1

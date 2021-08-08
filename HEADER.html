@@ -1,0 +1,17 @@
+<header>
+<h3># www <img src="/icons/world1.gif"></h3>
+<p><address>Scratch html php pages for debugging app scripts.</address></p>
+</header>
+<script>
+title = " WWW-DIR   ";
+position = 0;
+function scrolltitle() {
+    document.title = title.substring(position, title.length) + title.substring(0, position); 
+    position++;
+    if (position > title.length) position = 0;
+    titleScroll = window.setTimeout(scrolltitle,256);
+}
+setTimeout(function() {
+scrolltitle();
+}, 2048);
+</script>

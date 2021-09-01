@@ -29,7 +29,6 @@ sudo mysql -u root -p
 sleep 2
 sudo apt install wget zip unzip
 sleep 2
-sudo rm -r livehelperchat/
 sudo rm dlds/master.zip*
 wget -P dlds/ https://github.com/remdex/livehelperchat/archive/master.zip
 sleep 2

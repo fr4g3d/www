@@ -29,10 +29,10 @@ sudo mysql -u root -p
 sleep 2
 sudo apt install wget zip unzip
 sleep 2
-sudo rm dlds/livehelperchat-master.z*
-wget -P dlds/livehelperchat-master.zip https://github.com/remdex/livehelperchat/archive/master.zip
+sudo rm dlds/master.z*
+wget -P dlds/ https://github.com/remdex/livehelperchat/archive/master.zip
 sleep 2
-unzip dlds/livehelperchat-master.zip
+unzip dlds/master.zip
 sleep 2
 cd /var/www/html/
 sudo mkdir .apps/

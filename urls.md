@@ -9,3 +9,5 @@ https://handsome-crate.auto.playit.gg:43221/nc
 https://plain-toothbrush.auto.playit.gg:54705/
 #
 ssh://noxious-talk.auto.playit.gg:55391
+#
+http://free-spark.auto.playit.gg:51523/

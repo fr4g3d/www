@@ -1,7 +1,7 @@
 <?php
 //phpinfo();
 date_default_timezone_set("Asia/Jakarta");
-$title = "Apache Restarter Panel";
+$title = "Apache+MySQL Restarter Panel";
 if(isset($_GET['p'])) {
 	$title = $title ." - ". $_GET['p'];
 	$txt = $_GET['p'];
@@ -38,6 +38,15 @@ elseif(isset($_GET['execrestmy'])) { exec($restmy,$arr1,$int1); print_r(date("Y-
 elseif(isset($_GET['execstopmy'])) { exec($stopmy,$arr1,$int1); print_r(date("Y-m-d H:i:s")."<br>".$arr1[2]."<br>");print_r($arr1[3]."<br>"); print_r($arr1[7]."<br>");print_r($arr1[8]."<hr>"); }
 elseif(isset($_GET['execrestfz'])) { exec($restfz,$arr1,$int1); print_r(date("Y-m-d H:i:s")."<br>".$arr1[2]."<br>");print_r($arr1[3]."<br>"); print_r($arr1[7]."<br>");print_r($arr1[8]."<hr>"); }
 else {
+	
+function checkMySQL() {
+$conn = mysqli_connect('localhost', 'root', '');
+if (!$conn) {
+	return '<a href="?" style="color: red; cursor: wait;">Connection Failed!</a>'; // . $conn->connect_error;
+	} else {
+		return '<a href="?" style="color: green; cursor: wait;">Connected</a>';
+	}
+}
 ?>
 <html>
 <head>
@@ -56,7 +65,7 @@ hr {border: 0; border-top: 1px dashed #428BCA;}
 </style>
 </head>
 <body>
-<div id="top-panel"><div style="cursor: default;">OSS: <a href="" style="color: red; cursor: wait;"><u><?= php_uname() .' ('. PHP_OS .')' ?></u></a></div>
+<div id="top-panel"><div style="cursor: default;">OSS: <a href="?" style="color: red; cursor: wait;"><u><?= php_uname() .' ('. PHP_OS .')' ?></u></a></div>
 <h3>Apache Restarter Server</h3>
 <button id="btn1" type="button" onclick="execRestApMy('restap'); disTimed('btn1',74500); move(74000);">Restart Apache</button>
 <h3>MySQL Restarter Server</h3>
@@ -65,6 +74,7 @@ hr {border: 0; border-top: 1px dashed #428BCA;}
 <button id="btn3" type="button" onclick="execRestApMy('stopmy'); disTimed('btn3',5100); move(5000);">Stop MySQL</button>
 &nbsp;
 <button id="btn3a" type="button" onclick="execRestApMy('startpma'); disTimed('btn3a',1024); move(960);">Open MySQL Admin</button>
+MySQL Status: <?php echo checkMySQL(); ?>
 <h3>FTP Restarter Server</h3>
 <button id="btn4" type="button" onclick="execRestApMy('restfz'); disTimed('btn4',4800); move(4700);">Restart FTP</button>
 <hr>

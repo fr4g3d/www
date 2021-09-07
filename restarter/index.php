@@ -42,9 +42,9 @@ else {
 function checkMySQL() {
 $conn = mysqli_connect('localhost', 'root', '');
 if (!$conn) {
-	return '<a href="?" style="color: red; cursor: wait;">Connection Failed!</a>'; // . $conn->connect_error;
+	return '<a href="?" style="color: red; cursor: wait;">Connection Failed!</a>'."\n"; // . $conn->connect_error;
 	} else {
-		return '<a href="?" style="color: green; cursor: wait;">Connected</a>';
+		return '<a href="?" style="color: green; cursor: wait;">Connected</a>'."\n";
 	}
 }
 ?>

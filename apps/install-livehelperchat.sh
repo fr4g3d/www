@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# Live Helper Chat Installer for DebX.
+#
+clear
+#
+
 sudo apt update
 sudo apt install apache2 apache2-doc libapache2-mod-php openssl 
 sudo a2enmod headers
